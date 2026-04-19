@@ -1,0 +1,15 @@
+{
+  "name": "ecom-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "bullmq": "^5.34.5",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2"
+  }
+}

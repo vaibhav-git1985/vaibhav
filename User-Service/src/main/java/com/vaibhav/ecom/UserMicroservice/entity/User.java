@@ -22,6 +22,9 @@ public class User {
     private String email;
     
     private String password;
+
+    /** OIDC subject from Okta / social login */
+    private String externalSub;
     
 }
 

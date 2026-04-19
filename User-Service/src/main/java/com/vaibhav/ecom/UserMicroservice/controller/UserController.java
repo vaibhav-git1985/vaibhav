@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.vaibhav.ecom.UserMicroservice.dto.UserSyncRequest;
 import com.vaibhav.ecom.UserMicroservice.entity.User;
 import com.vaibhav.ecom.UserMicroservice.service.UserService;
+import com.vaibhav.ecom.UserMicroservice.web.UserSubInterceptor;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/users")
@@ -45,5 +49,10 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
-    
+    @PostMapping("/sync")
+    public ResponseEntity<User> syncProfile(HttpServletRequest request, @RequestBody UserSyncRequest body) {
+        String sub = (String) request.getAttribute(UserSubInterceptor.ATTR_USER_SUB);
+        User user = userService.syncFromOidc(sub, body.getEmail(), body.getUsername());
+        return ResponseEntity.ok(user);
+    }
 }
