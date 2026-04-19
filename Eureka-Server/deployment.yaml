@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eureka-server
+spec:
+  replicas: 1 # Number of replicas (pods) to run
+  selector:
+    matchLabels:
+      app: eureka-server
+  template:
+    metadata:
+      labels:
+        app: eureka-server
+    spec:
+      containers:
+        - name: eureka-server
+          image: eureka-server:1.0.0  # Docker image to deploy
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8761  # Port your application listens on
+---
+apiVersion: v1 # Kubernetes API version
+kind: Service # Kubernetes resource kind we are creating
+metadata: # Metadata of the resource kind we are creating
+  name: eureka-server-service
+spec:
+  selector:
+    app: eureka-server
+  ports:
+    - protocol: "TCP"
+      port: 8761 # The port that the service is running on in the cluster
+      targetPort: 8761 # The port exposed by the service
+  type: ClusterIP # type of the service.

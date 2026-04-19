@@ -1,0 +1,10 @@
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/repository/ShipmentRepository.java
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/entity/ShipmentEntity.java
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/web/InternalApiInterceptor.java
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/DeliveryServiceApplication.java
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/web/WebConfig.java
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/controller/InternalShipmentController.java
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/dto/CreateShipmentRequest.java
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/controller/DeliveryController.java
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/service/DeliveryService.java
+/Users/vaibhav/git/vaibhav/DELIVERY-SERVICE/src/main/java/com/vaibhav/ecom/delivery/dto/ShipmentResponse.java
